@@ -1,0 +1,170 @@
+/********
+ABSTRACT
+********/
+
+// Variable
+$main-theme-color: rgb(211, 58, 44);
+
+$main-font-color: white;
+$second-font-color: #333;
+
+//Mixin
+@mixin filter {
+  filter: grayscale(100%);
+}
+
+/******************************************
+BASE
+****/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: 1.6rem/1.5 'Comic Neue';
+  color: $main-font-color;
+  // apply the gray effect
+  // @include filter();
+}
+
+li {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: $main-font-color;
+}
+
+input {
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/******************************************
+COMPONENT
+********/
+
+// Header
+.main-header {
+  background-color: $main-theme-color;
+  height: 10rem;
+  font-size: 2.5rem;
+
+  &__navigator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 4.2rem;
+    height: 100%;
+  }
+
+  &__logo {
+    flex-basis: 20rem;
+
+    & img {
+      height: 7.4rem;
+      transform: translateY(2rem);
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__link {
+    &:visited,
+    &:link {
+      display: inline-block;
+      font-weight: bold;
+      text-transform: capitalize;
+      padding: 0.8rem 1.45rem;
+      height: 5rem;
+      border: 1px solid transparent;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.15);
+      border-radius: 1.1rem;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    &--1 {
+      &:last-child {
+        display: flex;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.15);
+        border-radius: 1.1rem;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 9px 30px -5px rgba(50, 50, 83, 0.25),
+          0 8px 8px -12px rgba(0, 0, 0, 0.2),
+          0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+      }
+
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+        background-image: url(https://d33wubrfki0l68.cloudfront.net/e3f5fe5fb4ec15257cc4137f13a0d5081b4ea5f8/aca41/images/icons/menu-cat.svg);
+        background-repeat: no-repeat;
+        margin-left: 1rem;
+      }
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__form {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  &__search-input {
+    color: $second-font-color;
+    padding: 1rem 2rem;
+    padding-left: calc(22px + 1.7rem + 1.7rem);
+    border-radius: 11px;
+    font: inherit;
+    font-weight: bold;
+    width: 35rem;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgaGVpZ2h0PSIyNHB4IiB3aWR0aD0iMjRweCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQiIHgxPSIyMi4zMSIgeTE9IjIzLjYyIiB4Mj0iMy43MyIgeTI9IjMuMDUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNlOTM3MjIiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmODZmMjUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48dGl0bGU+TWFnbmlmaWVyPC90aXRsZT48cGF0aCBmaWxsPSJ1cmwoI2xpbmVhci1ncmFkaWVudCkiIGQ9Ik0yMy4zMyAyMC4xbC00LjczLTQuNzRhMTAuMDYgMTAuMDYgMCAxIDAtMy4yMyAzLjIzbDQuNzQgNC43NGEyLjI5IDIuMjkgMCAxIDAgMy4yMi0zLjIzem0tMTcuNDgtNS44NGE1Ljk0IDUuOTQgMCAxIDEgOC40MiAwIDYgNiAwIDAgMS04LjQyIDB6Ii8+PC9zdmc+);
+    background-repeat: no-repeat;
+    background-position: 2rem 1.5rem;
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+    transition: box-shadow 1s;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &::placeholder {
+      color: rgba($second-font-color, 0.9);
+    }
+  }
+}

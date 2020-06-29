@@ -1,0 +1,22 @@
+{
+  "name": "smasmashing-magazine-clone",
+  "version": "1.0.0",
+  "description": "The Odin Project → HTML &amp; CSS Course → Assignment #05",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass style.scss style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohameDawood/smasmashing-magazine-clone.git"
+  },
+  "author": "Mohamed Dawood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MohameDawood/smasmashing-magazine-clone/issues"
+  },
+  "homepage": "https://github.com/MohameDawood/smasmashing-magazine-clone#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
