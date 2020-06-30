@@ -4,7 +4,9 @@ ABSTRACT
 /******************************************
 BASE
 ****/
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
@@ -14,7 +16,8 @@ html {
 
 body {
   font: 1.6rem/1.5 'Comic Neue';
-  color: white; }
+  color: white;
+  filter: grayscale(100%); }
 
 li {
   list-style: none; }
@@ -30,11 +33,43 @@ input {
     outline: none; }
 
 /******************************************
+Utilites
+**********/
+.center-abs-x {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.white-bg {
+  background-color: white;
+  padding: 1.2rem 1.6rem; }
+
+.margin--top-big {
+  margin-top: 5rem; }
+
+.test-div {
+  height: 500px;
+  width: 250px;
+  background-color: black;
+  border: 3px solid white; }
+
+/******************************************
+Typography
+**********/
+.main-heading {
+  color: black;
+  line-height: 1.52;
+  font-size: 4.1rem;
+  font-weight: 700; }
+  .main-heading--2 {
+    top: 5rem; }
+
+/******************************************
 COMPONENT
 ********/
 .main-header {
   background-color: #d33a2c;
-  height: 10rem;
+  height: 12.8vh;
   font-size: 2.5rem; }
   .main-header__navigator {
     display: flex;
@@ -61,7 +96,8 @@ COMPONENT
     padding: 0.8rem 1.45rem;
     height: 5rem;
     border: 1px solid transparent;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25); }
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    line-height: 1.2; }
   .main-header__link:hover {
     background-color: rgba(0, 0, 0, 0.15);
     border-radius: 1.1rem;
@@ -104,3 +140,115 @@ COMPONENT
       box-shadow: none; }
     .main-header__search-input::placeholder {
       color: rgba(51, 51, 51, 0.9); }
+
+.latest-articles {
+  height: 87.2vh; }
+  .latest-articles--1 {
+    background-color: #bc3428; }
+  .latest-articles--2 {
+    background-color: #c7372a; }
+  .latest-articles--3 {
+    background-color: #b13125; }
+  .latest-articles--4 {
+    background-color: #bc3428; }
+
+.latest-post__container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #666;
+  padding: 0 2rem;
+  padding-bottom: 15rem;
+  transition: all 0.2s ease-out; }
+  .latest-post__container::before {
+    content: '';
+    display: block;
+    width: calc(100% + 1.6rem);
+    height: 100%;
+    position: absolute;
+    top: -3rem;
+    left: -3rem;
+    background-color: transparent;
+    padding: 30px;
+    transition: background-color 0.2s ease-out; }
+  .latest-post__container:not(.advertisement):hover::before {
+    background-color: white;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.15); }
+  .latest-post__container:hover {
+    transform: scale(1.02); }
+
+.latest-post__container:hover > article,
+.latest-post__container:hover > a {
+  z-index: 100; }
+
+.latest-post__container:hover > a {
+  background-color: #006fc6;
+  color: white; }
+
+.latest-post__container:hover > a {
+  background-color: #006fc6;
+  color: white; }
+
+.latest-post__container:hover > h2 {
+  color: #d33a2c; }
+
+.latest-post__time {
+  font-size: 1.3rem;
+  letter-spacing: 1px; }
+
+.latest-post__heading a:link, .latest-post__heading a:visited {
+  color: black;
+  font-size: 2.9rem;
+  text-decoration-line: underline;
+  line-height: 1;
+  font-weight: bold; }
+
+.latest-post__by {
+  display: inline-block;
+  margin: 2.5rem 0;
+  line-height: 1;
+  font-weight: bold;
+  font-size: 2rem; }
+  .latest-post__by a:link, .latest-post__by a:visited {
+    color: #666;
+    font-size: 2rem;
+    text-decoration-line: underline;
+    line-height: 1;
+    font-weight: bold; }
+
+.latest-post__paragraph {
+  font-size: 2rem;
+  color: #333333;
+  font-weight: 400;
+  line-height: 1.8; }
+
+.latest-post__read-more:link, .latest-post__read-more:visited {
+  display: block;
+  color: #d33a2c;
+  padding: 4rem 5rem;
+  margin-top: 6rem;
+  font-size: 3rem;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  bottom: 30px;
+  left: -30px;
+  transition: background-color 0.2s ease-out; }
+
+/******************************************
+LATOUT
+********/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%; }
+  .row .col-1-2 {
+    width: 50%; }
+  .row .col-1-4 {
+    width: 25%; }
+
+.latest-post-section {
+  background-color: #b3d4fc;
+  padding-top: 5rem;
+  padding-left: 4rem;
+  padding-right: 4rem; }
