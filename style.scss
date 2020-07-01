@@ -3,13 +3,24 @@ ABSTRACT
 ********/
 
 // Variable
-$main-theme-color: rgb(211, 58, 44);
+$orange-color: rgb(211, 58, 44);
 $main-font-color: white;
 $second-font-color: #333;
+$blue-color: rgb(38, 125, 204);
 
 //Mixin
 @mixin filter {
   filter: grayscale(100%);
+}
+
+@mixin rotaion-animate {
+  transform: rotate(-12deg);
+  transform-origin: 0 100%;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: rotate(0deg);
+  }
 }
 
 /******************************************
@@ -42,7 +53,6 @@ li {
 a:link,
 a:visited {
   text-decoration: none;
-  color: $main-font-color;
 }
 
 input {
@@ -56,6 +66,7 @@ input {
 /******************************************
 Utilites
 **********/
+
 .center-abs-x {
   position: absolute;
   left: 50%;
@@ -81,6 +92,7 @@ Utilites
 /******************************************
 Typography
 **********/
+
 .main-heading {
   color: black;
   line-height: 1.52;
@@ -92,13 +104,82 @@ Typography
   }
 }
 
+.second-heading {
+  color: white;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: rgba(rgb(179, 212, 252), 0.4);
+}
+
 /******************************************
 COMPONENT
 ********/
 
+// image component
+.img {
+  width: 100%;
+  transform: scale(1.2) rotate(12deg);
+  transition: transform 0.2s;
+  position: relative;
+
+  &__shadow {
+    // &::before {
+    //   content: '';
+    //   width: 36%;
+    //   height: 90%;
+    //   display: block;
+    //   position: absolute;
+    //   top: 77.6%;
+    //   left: -5%;
+    //   transition: all 0.1s ease-out;
+    //   transform-origin: 30% 50%;
+    //   background-image: url(https://d33wubrfki0l68.cloudfront.net/10f9f40f8856e393ab4525a46bd8e60af9580324/0ab7a/images/shadow.png);
+    //   background-size: 100% auto;
+    //   background-repeat: no-repeat;
+    // }
+  }
+
+  &__container {
+    @include rotaion-animate;
+    border: 0.6rem solid $orange-color;
+    border-radius: 1.1rem;
+    overflow: hidden;
+
+    &:hover > .img {
+      transform: scale(1.2) rotate(0);
+    }
+  }
+}
+
+// button component
+.btn {
+  font-size: 2.5rem;
+  padding: 2rem 2.5rem;
+  line-height: 3rem;
+  font-weight: 700;
+  background-color: white;
+  border-radius: 1.1rem;
+}
+
+.btn--2 {
+  border-bottom: 5px solid $orange-color;
+
+  &__Container {
+    display: block;
+    background-color: #b3d4fc;
+    padding-bottom: 12rem;
+    transition: all 0.1s ease-out;
+    text-align: center;
+    color: rgb(51, 51, 51);
+  }
+}
+
 // Header
 .main-header {
-  background-color: $main-theme-color;
+  background-color: $orange-color;
   height: 12.8vh;
   font-size: 2.5rem;
 
@@ -135,6 +216,7 @@ COMPONENT
   &__link {
     &:visited,
     &:link {
+      color: white;
       display: inline-block;
       font-weight: bold;
       text-transform: capitalize;
@@ -346,6 +428,184 @@ COMPONENT
   }
 }
 
+// Content Table
+.content-table {
+  background-color: #1b71bb;
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+
+  header {
+    text-align: center;
+
+    span {
+      display: block;
+      margin-bottom: 3.5rem;
+      font-size: 1.7rem;
+      letter-spacing: 2px;
+    }
+  }
+
+  p {
+    text-align: center;
+    font-size: 2.5rem;
+    max-width: 55vw;
+    font-weight: 400;
+    line-height: 4rem;
+    margin: 2.5rem auto 5rem;
+
+    & strong {
+      font-weight: 700;
+    }
+  }
+
+  &__btn {
+    color: $blue-color;
+
+    &:hover {
+      color: #d33a2c;
+    }
+  }
+
+  &__img {
+    width: 55vw;
+    margin-top: 5rem;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.person--main {
+  color: #666;
+  font-family: serif;
+
+  &__container--main {
+    display: flex;
+    padding: 0 10rem;
+    padding-top: 7rem;
+  }
+
+  figure {
+    margin-right: 3rem;
+    width: 30rem;
+    height: 30rem;
+  }
+
+  &__img-container {
+    width: 25rem;
+    height: 25rem;
+    margin-top: 3.5rem;
+  }
+
+  &__img {
+  }
+
+  &__para-container {
+    h4 {
+      display: block;
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+    }
+
+    p {
+      margin: 3rem 0;
+      line-height: 3.5rem;
+      font-size: 2.1rem;
+
+      a:link,
+      a:visited {
+        color: $blue-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+//Person Component
+.person {
+  color: #666;
+  position: relative;
+  padding: 10rem 5rem 10rem 17rem;
+
+  &__contrainer {
+    margin-top: 8rem;
+  }
+
+  figure {
+    position: absolute;
+    width: 8.5rem;
+    height: 8.5rem;
+    left: 8%;
+    top: 30%;
+  }
+
+  &__img-container {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  &__img {
+  }
+
+  a {
+    &:link,
+    &:visited {
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    font-size: 2rem;
+    font-weight: 700;
+    a {
+    }
+  }
+
+  &__heading {
+    a {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        font-size: 3.5rem;
+      }
+    }
+  }
+
+  p {
+    font-size: 2.1rem;
+    line-height: 3.5rem;
+    a {
+      &:link,
+      &:visited {
+        color: $blue-color;
+      }
+    }
+  }
+
+  &__time {
+  }
+}
+
+// feature
+.feature {
+  &__time {
+    font-size: 1.6rem;
+    margin-left: 5px;
+  }
+  &__heading {
+    text-align: left;
+  }
+
+  p {
+    width: 55vw;
+  }
+
+  &__btn {
+  }
+}
+
 /******************************************
 LATOUT
 ********/
@@ -370,4 +630,21 @@ LATOUT
   padding-top: 5rem;
   padding-left: 4rem;
   padding-right: 4rem;
+}
+
+//Content table Seaction
+.content-table-seaction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.person--main__section {
+  background-color: rgb(179, 212, 252);
+}
+
+.feature-section {
+  background-color: #d33a2c;
+  height: 39rem;
+  padding: 6rem 10rem;
 }
