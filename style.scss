@@ -152,23 +152,6 @@ COMPONENT
   transition: transform 0.2s;
   position: relative;
 
-  &__shadow {
-    // &::before {
-    //   content: '';
-    //   width: 36%;
-    //   height: 90%;
-    //   display: block;
-    //   position: absolute;
-    //   top: 77.6%;
-    //   left: -5%;
-    //   transition: all 0.1s ease-out;
-    //   transform-origin: 30% 50%;
-    //   background-image: url(https://d33wubrfki0l68.cloudfront.net/10f9f40f8856e393ab4525a46bd8e60af9580324/0ab7a/images/shadow.png);
-    //   background-size: 100% auto;
-    //   background-repeat: no-repeat;
-    // }
-  }
-
   &__container {
     @include rotaion-animate;
     border: 0.6rem solid $orange-color;
@@ -305,7 +288,7 @@ COMPONENT
     border-radius: 11px;
     font: inherit;
     font-weight: bold;
-    width: 35rem;
+    width: 100%;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgaGVpZ2h0PSIyNHB4IiB3aWR0aD0iMjRweCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQiIHgxPSIyMi4zMSIgeTE9IjIzLjYyIiB4Mj0iMy43MyIgeTI9IjMuMDUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNlOTM3MjIiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmODZmMjUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48dGl0bGU+TWFnbmlmaWVyPC90aXRsZT48cGF0aCBmaWxsPSJ1cmwoI2xpbmVhci1ncmFkaWVudCkiIGQ9Ik0yMy4zMyAyMC4xbC00LjczLTQuNzRhMTAuMDYgMTAuMDYgMCAxIDAtMy4yMyAzLjIzbDQuNzQgNC43NGEyLjI5IDIuMjkgMCAxIDAgMy4yMi0zLjIzem0tMTcuNDgtNS44NGE1Ljk0IDUuOTQgMCAxIDEgOC40MiAwIDYgNiAwIDAgMS04LjQyIDB6Ii8+PC9zdmc+);
     background-repeat: no-repeat;
     background-position: 2rem 1.5rem;
