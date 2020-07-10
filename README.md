@@ -15,7 +15,7 @@ This project consists of building an HTML document that matches the appearance o
 
 ## Live Demo
 
-[Live Demo Link](https://rawcdn.githack.com/MohameDawood/smasmashing-magazine-clone/1f69401604a36f41a8e1411e41d0bebad29c3f84/index.html)
+[Live Demo Link](https://rawcdn.githack.com/MohameDawood/smasmashing-magazine-clone/798a575f5d080f0b6878c2bc15d2fe582a50f9fa/index.html)
 
 ## Authors
 
