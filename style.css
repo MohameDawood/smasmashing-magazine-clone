@@ -400,6 +400,15 @@ COMPONENT
   padding-bottom: 3rem;
 }
 
+.latest-articles__writer a:link,
+.latest-articles__writer a:visited {
+  font-weight: 700;
+  color: white;
+  margin-right: 0.5rem;
+  margin-left: 1rem;
+  font-size: 2.1rem;
+}
+
 .content-table header {
   text-align: center;
 }
@@ -418,6 +427,11 @@ COMPONENT
   font-weight: 400;
   line-height: 4rem;
   margin: 2.5rem auto 5rem;
+}
+
+.cat-post__para a:visited,
+.cat-post__para a:link {
+  text-decoration: underline;
 }
 
 .content-table p strong {
@@ -749,15 +763,6 @@ COMPONENT
   color: white;
 }
 
-.latest-articles__writer a:link,
-.latest-articles__writer a:visited {
-  font-weight: 700;
-  color: white;
-  margin-right: 0.5rem;
-  margin-left: 1rem;
-  font-size: 2.1rem;
-}
-
 .latest-articles__comment:link,
 .latest-articles__comment:visited {
   color: white;
@@ -795,11 +800,6 @@ COMPONENT
   color: white;
   font-size: 2rem;
   line-height: 3.5rem;
-}
-
-.cat-post__para a:link,
-.cat-post__para a:visited {
-  text-decoration: underline;
 }
 
 .cat-post__btn {
