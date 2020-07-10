@@ -1,7 +1,9 @@
 @charset "UTF-8";
+
 /********
 ABSTRACT
 ********/
+
 /******************************************
 BASE
 ****/
@@ -12,24 +14,30 @@ BASE
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
-  font-size: 62.5%;
+  fo
+  nt-size: 62.5%;
 }
 body {
-  font: 1.6rem/1.5 'Comic Neue';
+  font: 1.6rem/1.5;
   color: white;
   filter: grayscale(100%);
 }
+
 li {
   list-style: none;
 }
+
 a:link,
 a:visited {
   text-decoration: none;
 }
+
 input {
   border: none;
 }
+
 input:focus {
   outline: none;
 }
@@ -68,6 +76,7 @@ Typography
   font-size: 4.1rem;
   font-weight: 700;
 }
+
 .main-heading--2 {
   top: 5rem;
 }
@@ -105,6 +114,7 @@ COMPONENT
   letter-spacing: 4px;
   z-index: 100;
 }
+
 .vertical-heading--1 {
   left: 39px;
 }
@@ -115,6 +125,7 @@ COMPONENT
   transition: transform 0.2s;
   position: relative;
 }
+
 .img__container {
   transform: rotate(-12deg);
   transform-origin: 0 100%;
@@ -123,9 +134,11 @@ COMPONENT
   border-radius: 1.1rem;
   overflow: hidden;
 }
+
 .img__container:hover {
   transform: rotate(0deg);
 }
+
 .img__container:hover > .img {
   transform: scale(1.2) rotate(0);
 }
@@ -142,22 +155,26 @@ COMPONENT
 .btn--2 {
   border-bottom: 5px solid #d33a2c;
 }
+
 .btn--2:hover {
   color: #d33a2c;
 }
+
 .btn--2__Container {
   display: block;
   background-color: #b3d4fc;
   padding-bottom: 12rem;
   transition: all 0.1s ease-out;
   text-align: center;
-  color: #333333;
+  color: #333;
 }
+
 .main-header {
   background-color: #d33a2c;
   height: 12.8vh;
   font-size: 2.5rem;
 }
+
 .main-header__navigator {
   display: flex;
   align-items: center;
@@ -165,22 +182,27 @@ COMPONENT
   margin: 0 4.2rem;
   height: 100%;
 }
+
 .main-header__logo {
   flex-basis: 20rem;
 }
+
 .main-header__logo img {
   height: 7.4rem;
   transform: translateY(2rem);
 }
+
 .main-header__list {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-weight: 700;
 }
+
 .main-header__item:not(:last-child) {
   margin-right: 1.5rem;
 }
+
 .main-header__link:visited,
 .main-header__link:link {
   color: white;
@@ -193,11 +215,13 @@ COMPONENT
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   line-height: 1.2;
 }
+
 .main-header__link:hover {
   background-color: rgba(0, 0, 0, 0.15);
   border-radius: 1.1rem;
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
+
 .main-header__link--1:last-child {
   display: flex;
   align-items: center;
@@ -207,6 +231,7 @@ COMPONENT
   box-shadow: 0 9px 30px -5px rgba(50, 50, 83, 0.25),
     0 8px 8px -12px rgba(0, 0, 0, 0.2), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
 }
+
 .main-header__link--1::after {
   content: '';
   display: inline-block;
@@ -216,14 +241,17 @@ COMPONENT
   background-repeat: no-repeat;
   margin-left: 1rem;
 }
+
 .main-header__link:hover {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
 .main-header__form {
   display: flex;
   height: 100%;
   align-items: center;
 }
+
 .main-header__search-input {
   color: #333;
   padding: 1rem 2rem;
@@ -239,9 +267,11 @@ COMPONENT
     0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
   transition: box-shadow 1s;
 }
+
 .main-header__search-input:focus {
   box-shadow: none;
 }
+
 .main-header__search-input::placeholder {
   color: rgba(51, 51, 51, 0.9);
 }
@@ -249,15 +279,19 @@ COMPONENT
 .latest-articles {
   height: 87.2vh;
 }
+
 .latest-articles--1 {
   background-color: #bc3428;
 }
+
 .latest-articles--2 {
   background-color: #c7372a;
 }
+
 .latest-articles--3 {
   background-color: #b13125;
 }
+
 .latest-articles--4 {
   background-color: #bc3428;
 }
@@ -272,6 +306,7 @@ COMPONENT
   transition: all 0.2s ease-out;
   height: 75rem;
 }
+
 .latest-post__container::before {
   content: '';
   display: block;
@@ -284,10 +319,12 @@ COMPONENT
   padding: 30px;
   transition: background-color 0.2s ease-out;
 }
+
 .latest-post__container:not(.advertisement):hover::before {
   background-color: white;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
 }
+
 .latest-post__container:hover {
   transform: scale(1.02);
 }
@@ -363,15 +400,18 @@ COMPONENT
   padding-top: 7rem;
   padding-bottom: 3rem;
 }
+
 .content-table header {
   text-align: center;
 }
+
 .content-table header span {
   display: block;
   margin-bottom: 3.5rem;
   font-size: 1.7rem;
   letter-spacing: 2px;
 }
+
 .content-table p {
   text-align: center;
   font-size: 2.5rem;
@@ -380,19 +420,24 @@ COMPONENT
   line-height: 4rem;
   margin: 2.5rem auto 5rem;
 }
+
 .content-table p strong {
   font-weight: 700;
 }
+
 .content-table__btn {
   color: #267dcc;
 }
+
 .content-table__btn:hover {
   color: #d33a2c;
 }
+
 .content-table__img {
   width: 55vw;
   margin-top: 5rem;
 }
+
 .content-table__img img {
   width: 100%;
 }
@@ -401,32 +446,38 @@ COMPONENT
   color: #666;
   font-family: serif;
 }
+
 .person--main__container--main {
   display: flex;
   padding: 0 10rem;
   padding-top: 7rem;
 }
+
 .person--main figure {
   margin-right: 3rem;
   width: 30rem;
   height: 30rem;
 }
+
 .person--main__img-container {
   width: 25rem;
   height: 25rem;
   margin-top: 3.5rem;
 }
+
 .person--main__para-container h4 {
   display: block;
   font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: 2px;
 }
+
 .person--main__para-container p {
   margin: 3rem 0;
   line-height: 3.5rem;
   font-size: 2.1rem;
 }
+
 .person--main__para-container p a:link,
 .person--main__para-container p a:visited {
   color: #267dcc;
@@ -438,9 +489,11 @@ COMPONENT
   position: relative;
   padding: 10rem 5rem 10rem 17rem;
 }
+
 .person__contrainer {
   margin-top: 8rem;
 }
+
 .person figure {
   position: absolute;
   width: 8.5rem;
@@ -448,27 +501,33 @@ COMPONENT
   left: 8%;
   top: 30%;
 }
+
 .person__img-container {
   width: 8rem;
   height: 8rem;
 }
+
 .person a:link,
 .person a:visited {
   text-decoration: underline;
 }
+
 .person span {
   font-size: 2rem;
   font-weight: 700;
 }
+
 .person__heading a:link,
 .person__heading a:visited {
   text-decoration: none;
   font-size: 3.5rem;
 }
+
 .person p {
   font-size: 2.1rem;
   line-height: 3.5rem;
 }
+
 .person p a:link,
 .person p a:visited {
   color: #267dcc;
@@ -477,6 +536,7 @@ COMPONENT
 .feature {
   position: relative;
 }
+
 .feature__img-container {
   position: absolute;
   top: -20%;
@@ -487,24 +547,30 @@ COMPONENT
   transform-origin: 0 100%;
   transition: transform 0.2s;
 }
+
 .feature__img-container:hover {
   transform: rotate(0);
 }
+
 .feature__img {
   width: 100%;
 }
+
 .feature__time {
   font-size: 1.6rem;
   margin-left: 5px;
 }
+
 .feature__heading {
   text-align: left;
 }
+
 .feature p {
   width: 55vw;
   margin-top: 3rem;
   font-size: 2rem;
 }
+
 .feature__btn:link,
 .feature__btn:visited {
   display: block;
@@ -520,21 +586,25 @@ COMPONENT
   border-radius: 1.1rem;
   padding: 4rem;
 }
+
 .guide__time {
   font-size: 1.6rem;
   color: #333;
 }
+
 .guide__heading {
   text-align: left;
   color: #19a972;
   margin-bottom: 3rem;
 }
+
 .guide p {
   font-size: 2rem;
   text-align: left;
   color: #333;
   line-height: 3.5rem;
 }
+
 .guide__btn:link,
 .guide__btn:visited {
   background-color: #19a972;
@@ -559,25 +629,30 @@ COMPONENT
   background-size: 20.5rem auto;
   background-position: left 15% bottom 3rem;
 }
+
 .footer__list {
   display: flex;
   flex-wrap: wrap;
   padding: 5rem;
   justify-content: center;
 }
+
 .footer__item {
   list-style: disc;
   display: inline-block;
 }
+
 .footer__link:link,
 .footer__link:visited {
   color: white;
   font-size: 2.4rem;
   line-height: 5rem;
 }
+
 .footer__link:hover {
   color: #390c09;
 }
+
 .footer__link::before {
   content: '•';
   margin: 0 0.25em 0 0.25em;
@@ -587,22 +662,27 @@ COMPONENT
   position: relative;
   top: 2px;
 }
+
 .footer__para {
   text-align: center;
 }
+
 .footer__para a:link,
 .footer__para a:visited {
   text-decoration: underline;
 }
+
 .footer__list--2 {
   text-align: center;
   margin-top: 2rem;
   width: 35%;
 }
+
 .footer__item--2 {
   display: inline-block;
   margin: 0.9rem 1rem;
 }
+
 .footer__link--2:link,
 .footer__link--2:visited {
   color: white;
@@ -613,15 +693,18 @@ COMPONENT
   padding: 21.5rem 8.5rem 15rem;
   color: white;
 }
+
 .latest-articles ul {
   margin-top: 3rem;
 }
+
 .latest-articles ul li a::before {
   content: '#';
   color: #61140f;
   margin-right: 0.5rem;
   font-size: 2rem;
 }
+
 .latest-articles ul li a:link,
 .latest-articles ul li a:visited {
   color: white;
@@ -629,10 +712,12 @@ COMPONENT
   font-size: 2rem;
   margin-right: 1rem;
 }
+
 .latest-articles h2 {
   width: 100%;
   position: relative;
 }
+
 .latest-articles h2::before {
   content: '→';
   display: block;
@@ -644,6 +729,7 @@ COMPONENT
   bottom: -24rem;
   font-weight: 300;
 }
+
 .latest-articles__heading:link,
 .latest-articles__heading:visited {
   color: white;
@@ -653,14 +739,17 @@ COMPONENT
   letter-spacing: 1px;
   font-weight: 700;
 }
+
 .latest-articles__img-container {
   display: flex;
   margin-bottom: 2rem;
 }
+
 .latest-articles__writer {
   font-weight: 400;
   color: white;
 }
+
 .latest-articles__writer a:link,
 .latest-articles__writer a:visited {
   font-weight: 700;
@@ -669,6 +758,7 @@ COMPONENT
   margin-left: 1rem;
   font-size: 2.1rem;
 }
+
 .latest-articles__comment:link,
 .latest-articles__comment:visited {
   color: white;
@@ -690,33 +780,40 @@ COMPONENT
   padding: 2rem 8rem;
   height: 70rem;
 }
+
 .cat-post__img {
   width: 28.5rem;
 }
+
 .cat-post__heading {
   text-decoration: underline;
   font-weight: 700;
   font-size: 5rem;
   letter-spacing: 1px;
 }
+
 .cat-post__para {
   color: white;
   font-size: 2rem;
   line-height: 3.5rem;
 }
+
 .cat-post__para a:link,
 .cat-post__para a:visited {
   text-decoration: underline;
 }
+
 .cat-post__btn {
   margin: 0 auto;
   margin-top: 3rem;
   display: block;
   width: fit-content;
 }
+
 .cat-post__dp {
   margin-top: 2rem;
 }
+
 .cat-post__btn--2:link,
 .cat-post__btn--2:visited {
   text-decoration: underline;
@@ -729,18 +826,23 @@ COMPONENT
   margin: auto;
   margin-top: 6rem;
 }
+
 .subscribe__img-container {
   width: 100%;
 }
+
 .subscribe__img {
   width: 100%;
 }
+
 .subscribe__container {
   padding: 0 4rem 3rem;
 }
+
 .subscribe__heading-container {
   padding: 2rem 0;
 }
+
 .subscribe__heading:link,
 .subscribe__heading:visited {
   font-size: 4rem;
@@ -748,16 +850,20 @@ COMPONENT
   color: white;
   text-decoration: underline;
 }
+
 .subscribe__para {
   font-size: 2rem;
   line-height: 3.5rem;
 }
+
 .subscribe__form {
   position: relative;
 }
+
 .subscribe__form-container {
   margin: 2rem 0;
 }
+
 .subscribe__input--text {
   width: 100%;
   border-radius: 1.1rem;
@@ -765,6 +871,7 @@ COMPONENT
   padding: 1.8rem 2.5rem;
   font-size: 2.5rem;
 }
+
 .subscribe__input--submit {
   position: absolute;
   width: 40%;
@@ -774,6 +881,7 @@ COMPONENT
   padding: 1.8rem 2.5rem;
   font-size: 2.5rem;
 }
+
 .subscribe__footer {
   margin: auto;
   margin-top: 2rem;
@@ -792,15 +900,19 @@ LATOUT
   flex-wrap: wrap;
   width: 100%;
 }
+
 .row .col-1-2 {
   width: 50%;
 }
+
 .row .col-1-4 {
   width: 25%;
 }
+
 .row .col-1-3 {
   width: calc((100% - (2 * 3.3rem)) / 3);
 }
+
 .row .col-1-3:not(:last-child) {
   margin-right: 3.3rem;
 }
